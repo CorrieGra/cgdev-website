@@ -6,8 +6,12 @@ textarea {
     background-color: var(--col-s-grey);
     border: none;
 
-    &:focus {
+    &:focus:not(.input__errors) {
         outline: 1px solid var(--col-p-cyan);
+    }
+
+    &.input__error {
+        outline: 1px solid var(--col-s-red);
     }
 }
 
