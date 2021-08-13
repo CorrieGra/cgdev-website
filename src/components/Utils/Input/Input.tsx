@@ -8,6 +8,7 @@ interface IInputParams {
     onChange?: any;
     onBlur?: any;
     register?: any;
+    errors?: any;
     validation?: any;
 }
 
@@ -20,22 +21,26 @@ interface IInputParams {
  * @property { any } onChange is an optional parameter
  * @property { any } onBlur is an optional parameter
  * @property { any } register is an optional parameter used when using react-hook-form
- * @property { any } validation is an optional parameter used when passing react-hook-form validations to register
+ * @property { any } errors is an optional parameter used when checking react-hook-form's errors
+ * @property { any } validation is an optional parameter used when checking react-hook-form's input validity
  * @returns JSX.Element
  */
 export function Input(props: IInputParams): JSX.Element {
     const TextField = () => (
-        <input 
+        <input
+        className={ props.errors[props.name] ? 'input__error' : null } 
         type={ props.type === undefined ? 'text' : props.type } 
         onChange={ props.onChange !== undefined ? props.onChange : null }
-        { ...props.register(props.name) }>
+        { ...props.register(props.name, props.validation !== undefined ? { ...props.validation } : undefined) }>
         </input>
     );
 
     const TextArea = () => (
-        <textarea 
-        rows={10}
-        onChange={ props.onChange !== undefined ? props.onChange : null }>
+        <textarea
+        className={ props.errors[props.name] ? 'input__error' : null } 
+        rows={ 10 }
+        onChange={ props.onChange !== undefined ? props.onChange : null }
+        { ...props.register(props.name, props.validation !== undefined ? { ...props.validation } : undefined) }>
         </textarea>
     );
 
