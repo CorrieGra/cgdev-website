@@ -34,6 +34,7 @@ export function Input(props: IInputParams): JSX.Element {
 
     const TextArea = () => (
         <textarea 
+        rows={10}
         onChange={ props.onChange !== undefined ? props.onChange : null }>
         </textarea>
     );

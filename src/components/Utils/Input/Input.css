@@ -1,6 +1,7 @@
 input,
 textarea {
-  max-width: 24rem;
+  max-width: 100%;
+  width: 100%;
   padding: .9rem 1.6rem 2.2rem 1.6rem;
   background-color: var(--col-s-grey);
   border: none;
@@ -8,6 +9,6 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 1px solid var(--col-p-cyan);
+  outline: 1px solid var(--col-p-cyan);
 }
 /*# sourceMappingURL=Input.css.map */
