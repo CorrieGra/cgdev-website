@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { createStore } from 'easy-peasy';
+import axios from 'axios';
+import { Action, action, createStore, persist, Thunk, thunk } from 'easy-peasy';
 
 interface IProject {
     project_name: string;
@@ -20,16 +21,52 @@ interface IExperience {
     experience_technologies: string[] | null;
 }
 
-interface IStore {
-    projects: IProject[] | null;
+export interface IStore {
+    projects: IProject[] | any[];
     project: IProject | null;
-    experiences: IExperience[] | null;
+    experiences: IExperience[] | any[];
+    loadProjects: Thunk<IStore>;
+    addLoadedProjects: Action<IStore, any>;
+    loadExperiences: Thunk<IStore>;
+    addLoadedExperiences: Action<IStore, any>;
 }
 
-const store = createStore(<IStore>{
-    projects: null,
+const store = createStore<IStore>({
+    projects: [],
     project: null,
-    experiences: null
+    experiences: [],
+    addLoadedProjects: action((state, payload: any) => {
+        state.projects.push(...payload);
+    }),
+    loadProjects: thunk(async (actions) => {
+        await axios({
+            url: 'http://localhost:5000/api/project',
+            method: 'GET',
+            withCredentials: true
+        })
+        .then((response) => {
+            actions.addLoadedProjects(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }),
+    addLoadedExperiences: action((state, payload: any) => {
+        state.experiences.push(...payload);
+    }),
+    loadExperiences: thunk(async (actions) => {
+        await axios({
+            url: 'http://localhost:5000/api/experience',
+            method: 'GET',
+            withCredentials: true
+        })
+        .then((response) => {
+            actions.addLoadedExperiences(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }),
 });
 
 export default store;
