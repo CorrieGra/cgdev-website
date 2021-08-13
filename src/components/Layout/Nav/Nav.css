@@ -8,8 +8,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100vw;
-  padding: 3rem 10% 0 10%;
+  width: 100%;
+  padding: 3rem 10% 3rem 10%;
 }
 
 .nav > .nav__logo img {
