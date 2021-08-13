@@ -1,0 +1,47 @@
+.timeline__item {
+  margin-bottom: 5rem;
+}
+
+.timeline__item--title h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--fs-m);
+}
+
+.timeline__item--duration, .timeline__item--company, .timeline__item--location, .timeline__item--technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline__item--duration {
+  font-size: var(--fs-xs);
+  color: #acacac;
+}
+
+.timeline__item--technology {
+  font-size: 1.2rem;
+  padding: .5rem 2rem;
+  margin-top: 1.5rem;
+  background-color: var(--col-p-dblue);
+  -webkit-box-shadow: 0 5px 6px var(--col-p-grey-blue);
+          box-shadow: 0 5px 6px var(--col-p-grey-blue);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.timeline__item--technology:not(:last-of-type) {
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=Timeline.css.map */
