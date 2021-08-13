@@ -1,9 +1,9 @@
 import './Timeline.css';
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 
 export function Timeline(): JSX.Element {
-    const [items, setItems] = useState([
+    const [items] = useState([
         {
             experience_company: "Cenoex",
             experience_company_location: "Pretoria, Gauteng",
