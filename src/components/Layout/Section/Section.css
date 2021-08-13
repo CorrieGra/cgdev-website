@@ -21,6 +21,10 @@ section > .section__header > h1 {
   text-transform: capitalize;
 }
 
+section .section__intro {
+  max-width: 70ch;
+}
+
 section .section__cta {
   margin-top: 2rem;
 }
