@@ -58,9 +58,20 @@ Users should be able to:
 - Development of the Nestjs [back end]() with a [PostgreSQL](https://www.postgresql.org/) database for my portal 
   - Learn Nestjs fundementals [ ✔ ]
   - Set up folder structure [ ✔ ]
-  - Add and test auth endpoint and all needed functionality [ ✔ ]
-  - Add and test project and all needed functionality [ ✔ ]
-  - Add and test experience and all needed functionality [ ✔ ]
+  - Authorization endpoints
+    - POST: Register User [ ✔ ]
+    - POST: Login User [ ✔ ]
+  - Project Endpoints
+    - GET: Get All Projects [ ✔ ]
+    - GET: Get A Project [ ✔ ]
+    - POST: Add A Project [ ✔ ]
+    - PUT: Activate A Project [ ✔ ]
+    - PUT: Deactivate A Project [ ✔ ]
+  - Experience Endpoints
+    - GET: Get All Experiences [ ✔ ]
+    - GET: Get An Experience [ ✔ ]
+    - POST: Add Experience [ ✔ ]
+    - PUT: End Experience [ ✔ ]
 
 <br/>
 
