@@ -68,6 +68,7 @@ Users should be able to:
   - Removed all unnecessary files [ ✔ ]
   - Set up folder structure [ ✔ ]
   - Set up all css variables, resets and basic styling [ ✔ ]
+  - Implement Easy Peasy For State Management [ ✔ ]
   - Build all components first 
     - Timeline [ ✔ ]
     - Layout
