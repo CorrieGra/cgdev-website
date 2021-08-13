@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import axios from 'axios';
-import { Action, action, createStore, persist, Thunk, thunk } from 'easy-peasy';
+import { Action, action, createStore, Thunk, thunk } from 'easy-peasy';
 
-interface IProject {
+export interface IProject {
     project_name: string;
     project_background: string;
     project_description: string;
@@ -36,7 +36,7 @@ const store = createStore<IStore>({
     project: null,
     experiences: [],
     addLoadedProjects: action((state, payload: any) => {
-        state.projects.push(...payload);
+        state.projects = payload;
     }),
     loadProjects: thunk(async (actions) => {
         await axios({
@@ -52,7 +52,7 @@ const store = createStore<IStore>({
         });
     }),
     addLoadedExperiences: action((state, payload: any) => {
-        state.experiences.push(...payload);
+        state.experiences = payload;
     }),
     loadExperiences: thunk(async (actions) => {
         await axios({
