@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { HomeView } from '../../views/HomeView/HomeView';
 import { Footer } from '../Layout/Footer/Footer';
 import { Nav } from '../Layout/Nav/Nav';
 import { Container } from '../Utils/Container/Container';
@@ -15,7 +16,9 @@ function App() {
         <Container>
           {/* Switch For Routes */}
           <Switch>
-            
+            <Route exact path="/">
+              <HomeView />
+            </Route>
           </Switch>
         </Container>
 
