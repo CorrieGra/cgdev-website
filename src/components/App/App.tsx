@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { ContactView } from '../../views/ContactView/ContactView';
 import { HomeView } from '../../views/HomeView/HomeView';
+import { ProjectsView } from '../../views/ProjectsView/ProjectsView';
 import { Footer } from '../Layout/Footer/Footer';
 import { Nav } from '../Layout/Nav/Nav';
 import { Container } from '../Utils/Container/Container';
@@ -34,7 +35,9 @@ function App() {
             <Route exact path="/">
               <HomeView />
             </Route>
-
+            <Route path="/portfolio">
+              <ProjectsView />
+            </Route>
             <Route path="/contact-me">
               <ContactView />
             </Route>
