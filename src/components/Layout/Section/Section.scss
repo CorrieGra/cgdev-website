@@ -19,9 +19,9 @@ section {
     .section__cta { 
         margin-top: 2rem;
 
-        > button { 
-            display: inline; 
-            
+        > a { 
+            display: inline-block;
+
             &:not(:last-of-type) { margin-right: 2rem; }
         }
      }

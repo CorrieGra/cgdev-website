@@ -25,11 +25,11 @@ section .section__cta {
   margin-top: 2rem;
 }
 
-section .section__cta > button {
-  display: inline;
+section .section__cta > a {
+  display: inline-block;
 }
 
-section .section__cta > button:not(:last-of-type) {
+section .section__cta > a:not(:last-of-type) {
   margin-right: 2rem;
 }
 /*# sourceMappingURL=Section.css.map */
