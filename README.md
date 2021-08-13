@@ -83,7 +83,7 @@ Users should be able to:
     - HomeView [ ✔ ]
     - ProjectView [  ]
     - ProjectDetailsView [  ]
-    - ContactUsView [  ]
+    - ContactUsView [ ✔ ]
   - Add animations with [FramerMotion](https://www.framer.com/motion/)
     - Page transition from ProjectView to ProjectDetailsView [  ]
     - Scroll effects [  ]
