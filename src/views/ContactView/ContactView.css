@@ -1,0 +1,47 @@
+form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "name email" "message message";
+}
+
+form > #client_name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+form > #client_email {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+form > #client_message {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: message;
+}
+
+form > .form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+form > .form__group:last-of-type {
+  margin-bottom: 3rem;
+}
+
+form > .form__group label {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=ContactView.css.map */
