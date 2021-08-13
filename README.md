@@ -4,7 +4,7 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 
 **Note: Frontend Mentor permits us to use our solutions for each challenge on our portfolio and with this challenge we may use it as our portfolio. Since I like it's minimalistic design, I decided to do so until I can afford to design a portfolio to my liking.**
 
-![Preview](./preview.jpg)
+![Preview](./preview.png)
 
 
 ## Table of contents
