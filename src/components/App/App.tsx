@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import { ContactView } from '../../views/ContactView/ContactView';
 import { HomeView } from '../../views/HomeView/HomeView';
 import { Footer } from '../Layout/Footer/Footer';
@@ -8,6 +8,20 @@ import { Container } from '../Utils/Container/Container';
 import './App.css';
 
 function App() {
+  const history = useHistory();
+
+  useEffect(() => {
+      const unlisten = history.listen(() => {
+        window.scrollTo(0, 0);
+      });
+
+      return () => {
+        unlisten();
+      };
+      
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
       <div className="App">
         {/* Navigation Bar */}
