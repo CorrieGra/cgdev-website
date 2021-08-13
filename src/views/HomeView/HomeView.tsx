@@ -1,11 +1,23 @@
-import React, { Fragment } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Section } from "../../components/Layout/Section/Section";
 import { Timeline } from "../../components/Timeline/Timeline";
 import { Button } from "../../components/Utils/Button/Button";
 import { Header } from "../../components/Utils/Header/Header";
+import { createTypedHooks } from 'easy-peasy';
+import { IStore } from "../../store";
+
+const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
 
 export function HomeView() {
+    const experiences = useStoreState((state) => state.experiences);
+    const loadExperiences = useStoreActions((actions) => actions.loadExperiences);
+
+    useEffect(() => {
+        loadExperiences();
+    }, []);
+
     return (
         <Fragment>
             <Header
@@ -27,7 +39,7 @@ export function HomeView() {
             </Section>
 
             <Section title="experience">
-                <Timeline />
+                <Timeline data={ experiences }/>
             </Section>
         </Fragment>
     );
