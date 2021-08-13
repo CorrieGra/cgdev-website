@@ -8,7 +8,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   padding: 2rem 10% 2rem 10%;
   background-color: var(--col-p-grey-blue);
 }
