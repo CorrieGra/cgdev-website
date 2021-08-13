@@ -46,12 +46,12 @@ Users should be able to:
 - CSS Grid
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/) - JS library
-- [ReactRouter](https://reactrouter.com/) - For routing in react
+- [React Router](https://reactrouter.com/) - For routing in react
 - [Scss](https://sass-lang.com/) - For styling
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
-- [EasyPeasy](https://easy-peasy.vercel.app/docs/introduction/) - Easy Peasy is an abstraction of Redux. It provides a reimagined API focussing on developer experience, allowing you to quickly and easily manage your state, whilst leveraging the strong architectural guarantees and providing integration with the extensive eco-system that Redux has to offer.
+- [Easy Peasy](https://easy-peasy.vercel.app/docs/introduction/) - Easy Peasy is an abstraction of Redux. It provides a reimagined API focussing on developer experience, allowing you to quickly and easily manage your state, whilst leveraging the strong architectural guarantees and providing integration with the extensive eco-system that Redux has to offer.
 - [Moment](https://momentjs.com/) - For easily working with dates and related calculations
-- [FramerMotion](https://www.framer.com/motion/) - For animations
+- [Framer Motion](https://www.framer.com/motion/) - For animations
 
 ### Project development
 
