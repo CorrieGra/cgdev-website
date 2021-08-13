@@ -69,18 +69,17 @@ Users should be able to:
   - Set up folder structure [ ✔ ]
   - Set up all css variables, resets and basic styling [ ✔ ]
   - Build all components first 
+    - Timeline [ ✔ ]
     - Layout
-      - Header [ ✔ ]
       - Nav [ ✔ ]
       - Footer [ ✔ ]
     - Utils
       - Button [ ✔ ]
       - Container [ ✔ ]
-      - Header [  ]
-      - Hero [  ]
+      - Header [ ✔ ]
       - Input [ ✔ ]
   - Build all views
-    - HomeView [  ]
+    - HomeView [ ✔ ]
     - ProjectView [  ]
     - ProjectDetailsView [  ]
     - ContactUsView [  ]
