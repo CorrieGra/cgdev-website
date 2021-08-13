@@ -1,0 +1,41 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "showcase info";
+    margin: 0 auto 4rem auto;
+
+    &:only-of-type { margin: 0 auto 8rem auto; }
+    
+    &:not(:first-of-type) { margin: 8rem auto; }
+    
+    &:nth-child(even) { grid-template-areas: "info showcase"; }
+
+    max-width: 80%;
+
+    &__showcase img {
+        max-width: 100%;
+    }
+
+    &__info-wrapper {        
+         .card__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            border-top: 1px solid var(--col-s-grey);
+            border-bottom: 1px solid var(--col-s-grey);
+            margin: 0 20%;
+
+            > h2 { text-transform: capitalize; }
+
+             &--cta button {
+                display: inline-block;
+
+                &:first-of-type { margin-right: 2rem; }
+            }
+        }
+    }
+
+    #showcase { grid-area: showcase; }
+    #info { grid-area: info; }
+}
