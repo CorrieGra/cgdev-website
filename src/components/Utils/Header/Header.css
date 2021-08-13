@@ -1,0 +1,27 @@
+header {
+  position: relative;
+  max-height: 50rem;
+  width: 80%;
+  margin: 0 auto 15rem auto;
+  overflow: hidden;
+}
+
+header > .header__image > img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+header > .header__intro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45rem;
+  padding: 2rem;
+  background-color: var(--col-s-lgrey);
+}
+
+header > .header__intro > h2 {
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=Header.css.map */
