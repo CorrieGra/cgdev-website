@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ContactView } from '../../views/ContactView/ContactView';
 import { HomeView } from '../../views/HomeView/HomeView';
 import { Footer } from '../Layout/Footer/Footer';
 import { Nav } from '../Layout/Nav/Nav';
@@ -18,6 +19,10 @@ function App() {
           <Switch>
             <Route exact path="/">
               <HomeView />
+            </Route>
+
+            <Route path="/contact-me">
+              <ContactView />
             </Route>
           </Switch>
         </Container>
