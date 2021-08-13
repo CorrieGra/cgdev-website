@@ -4,12 +4,13 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 
 **Note: Frontend Mentor permits us to use our solutions for each challenge on our portfolio and with this challenge we may use it as our portfolio. Since I like it's minimalistic design, I decided to do so until I can afford to design a portfolio to my liking.**
 
+![Preview](./preview.jpg)
+
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Preview](#preview)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -30,9 +31,6 @@ Users should be able to:
   - The `Name`, `Email Address` or `Message` fields are empty should show "This field is required"
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
 
-### Preview
-
-![Preview](./preview.jpg)
 
 ### Links
 
