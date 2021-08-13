@@ -1,0 +1,41 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+  padding: 3rem 10% 0 10%;
+}
+
+.nav > .nav__logo img {
+  width: 20rem;
+}
+
+.nav > .nav__menu > .nav__menu--list {
+  list-style-type: none;
+}
+
+.nav > .nav__menu > .nav__menu--list > .nav__menu--item {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.nav > .nav__menu > .nav__menu--list > .nav__menu--item:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.nav > .nav__menu > .nav__menu--list > .nav__menu--item > a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--col-p-grey-blue);
+}
+
+.nav > .nav__menu > .nav__menu--list > .nav__menu--item.active > a {
+  color: var(--col-p-cyan);
+}
+/*# sourceMappingURL=Nav.css.map */

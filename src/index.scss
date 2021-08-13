@@ -1,0 +1,77 @@
+:root {
+    // colors
+    --col-p-cyan: #5FB4A2;
+    --col-p-dblue: #203A4C;
+    --col-p-grey-blue: #33323D;
+    --col-s-lgrey: #FAFAFA;
+    --col-s-grey: #EAEAEB;
+    --col-s-red: #FA3030;
+
+    // font-sizes
+    --fs-xs: 1.5rem;
+    --fs-s: 1.6rem;
+    --fs-m: 3.2rem;
+    --fs-l: 4.2rem;
+    --fs-xl: 5rem;
+}
+
+@font-face {
+    font-family: 'IbarraNova-b';
+    src: url('./fonts/IbarraRealNova-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'IbarraNova-r';
+    src: url('./fonts/IbarraRealNova-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PublicSans-r';
+    src: url('./fonts/PublicSans-Regular.ttf');
+}
+
+*,
+*::before,
+*::after,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'PublicSans-r', sans-serif;
+    font-size: var(--fs-s);
+    line-height: 3rem;
+    color: var(--col-p-grey-blue);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'IbarraNova-b', sans-serif;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+    line-height: 5rem;
+    letter-spacing: -0.45;
+}
+
+h2 {
+    font-size: var(--fs-l);
+    line-height: 4.2rem;
+    letter-spacing: -0.36;
+}
+
+h3 {
+    font-size: var(--fs-m);
+    line-height: 3.6rem;
+    letter-spacing: -0.29;
+}

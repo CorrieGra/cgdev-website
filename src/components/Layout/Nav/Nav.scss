@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 3rem 10% 0 10%;
+
+    > .nav__logo img {
+        width: 20rem;
+    }
+
+    > .nav__menu {
+        > .nav__menu--list {
+            list-style-type: none;
+
+            > .nav__menu--item {
+                display: inline-block;
+                text-transform: uppercase;
+
+                &:not(:last-child) { margin-right: 5rem; }
+
+                > a {
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                    color: var(--col-p-grey-blue);
+                }
+
+                &.active {
+                    > a {
+                        color: var(--col-p-cyan);
+                    }
+                }
+            }
+        }
+    }
+}
