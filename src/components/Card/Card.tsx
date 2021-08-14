@@ -2,13 +2,12 @@ import './Card.css';
 import React from 'react';
 import { Button } from '../Utils/Button/Button';
 
-
 export function Card(props: any) {
-    const project = props.project;
+    const { project, onClick, id } = props;
     const project_slices = JSON.parse(project.project_slices);
 
     return (
-        <div className="card">
+        <div id={ id } className="card">
             <div id="showcase" className="card__showcase">
                 <img src={ project_slices.project_slice_1 } alt="" />
             </div>
@@ -17,7 +16,7 @@ export function Card(props: any) {
                     <h2>{ project.project_name }</h2>
                     <p>{ project.project_description }</p>
                     <div className="card__info--cta">
-                        <Button type="secondary" text="view project" />
+                        <Button type="secondary" text="view project" onClick={ onClick }/>
                     </div>
                 </div>
             </div>
