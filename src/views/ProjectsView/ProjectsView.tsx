@@ -17,7 +17,7 @@ export function ProjectsView() {
         loadProjects();
     }, []);
 
-    const onClick = (id: string) => { history.push(`project-details?id=${ id }`); };
+    const onClick = (id: string) => { history.replace(`/project-details/${ id }`); };
 
     return (
         <Fragment>
