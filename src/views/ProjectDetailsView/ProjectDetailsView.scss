@@ -1,0 +1,50 @@
+.project__info {
+    &--outer-wrapper {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--inner-wrapper {
+        display: grid;
+        grid-template-columns: 35% 65%;
+
+        h3 {
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--left-panel {
+        .project__info--bookmark {
+            p { 
+                padding-right: 1rem;
+                margin-bottom: 2rem; 
+            }
+
+            .project__info--cta button{
+                display: inline-block;
+
+                &:first-of-type { margin-right: 2rem; }
+            }
+        }
+    }
+
+    &--right-panel {
+        display: flex;
+        flex-direction: column;
+
+        .project__info--background,
+        .project__info--previews {
+            margin-bottom: 4rem;
+        }
+
+        .project__info--previews img {
+            max-width: 100%;
+            width: 100%;
+
+            &:first-of-type { margin-bottom: 1.5rem; }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.project__info--outer-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project__info--inner-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+}
+
+.project__info--inner-wrapper h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.project__info--left-panel .project__info--bookmark p {
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project__info--left-panel .project__info--bookmark .project__info--cta button {
+  display: inline-block;
+}
+
+.project__info--left-panel .project__info--bookmark .project__info--cta button:first-of-type {
+  margin-right: 2rem;
+}
+
+.project__info--right-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project__info--right-panel .project__info--background,
+.project__info--right-panel .project__info--previews {
+  margin-bottom: 4rem;
+}
+
+.project__info--right-panel .project__info--previews img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.project__info--right-panel .project__info--previews img:first-of-type {
+  margin-bottom: 1.5rem;
+}
+/*# sourceMappingURL=ProjectDetailsView.css.map */
