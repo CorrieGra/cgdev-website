@@ -18,7 +18,6 @@ export function Card(props: any) {
                     <p>{ project.project_description }</p>
                     <div className="card__info--cta">
                         <Button type="secondary" text="view project" />
-                        <Button type="secondary" text="view repo"/>
                     </div>
                 </div>
             </div>
