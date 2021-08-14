@@ -93,7 +93,7 @@ Users should be able to:
   - Build all views
     - HomeView [ ✔ ]
     - ProjectView [ ✔ ]
-    - ProjectDetailsView [  ]
+    - ProjectDetailsView [ ✔ ]
     - ContactUsView [ ✔ ]
   - Add animations with [FramerMotion](https://www.framer.com/motion/)
     - Page transition from ProjectView to ProjectDetailsView [  ]
