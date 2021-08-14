@@ -7,8 +7,7 @@ export interface IProject {
     project_background: string;
     project_description: string;
     project_hero: any;
-    project_slice_1: any;
-    project_slice_2: any;
+    project_slices: any;
 }
 
 interface IExperience {
@@ -27,6 +26,8 @@ export interface IStore {
     experiences: IExperience[] | any[];
     loadProjects: Thunk<IStore>;
     addLoadedProjects: Action<IStore, any>;
+    loadProject: Thunk<IStore>;
+    addLoadedProject: Action<IStore, any>;
     loadExperiences: Thunk<IStore>;
     addLoadedExperiences: Action<IStore, any>;
 }
@@ -46,6 +47,22 @@ const store = createStore<IStore>({
         })
         .then((response) => {
             actions.addLoadedProjects(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    }),
+    addLoadedProject: action((state, payload: any) => {
+        state.project = payload;
+    }),
+    loadProject: thunk(async (actions, payload) => {
+        await axios({
+            url: `http://localhost:5000/api/project/${ payload }`,
+            method: 'GET',
+            withCredentials: true
+        })
+        .then((response) => {
+            actions.addLoadedProject(response.data);
         })
         .catch((error) => {
             console.log(error);
