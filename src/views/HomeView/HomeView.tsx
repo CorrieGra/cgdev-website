@@ -21,6 +21,7 @@ export function HomeView() {
     return (
         <Fragment>
             <Header
+            image="assets/images/homepage-hero.jpg"
             hasIntro
             intro="Hello, I'm Corrie Graham and I love to build beautiful websites"/>
 
