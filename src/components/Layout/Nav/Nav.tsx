@@ -18,10 +18,10 @@ export function Nav() {
                         <Link to="/">home</Link>
                     </li>
                     <li className={ location.pathname === '/portfolio' ? 'nav__menu--item active' : 'nav__menu--item' }>
-                        <Link to="portfolio">portfolio</Link>
+                        <Link to="/portfolio">portfolio</Link>
                     </li>
                     <li className={ location.pathname === '/contact-me' ? 'nav__menu--item active' : 'nav__menu--item' }>
-                        <Link to="contact-me">contact me</Link>
+                        <Link to="/contact-me">contact me</Link>
                     </li>
                 </ul>
             </div>
