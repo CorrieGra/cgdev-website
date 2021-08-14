@@ -8,6 +8,8 @@ export interface IProject {
     project_description: string;
     project_hero: any;
     project_slices: any;
+    project_website_url: string;
+    project_repo_url: string;
 }
 
 interface IExperience {
