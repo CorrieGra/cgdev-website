@@ -92,7 +92,7 @@ Users should be able to:
       - Input [ ✔ ]
   - Build all views
     - HomeView [ ✔ ]
-    - ProjectView [  ]
+    - ProjectView [ ✔ ]
     - ProjectDetailsView [  ]
     - ContactUsView [ ✔ ]
   - Add animations with [FramerMotion](https://www.framer.com/motion/)
