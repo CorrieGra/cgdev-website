@@ -5,6 +5,7 @@ import { Button } from '../Button/Button';
 interface IHeader {
     hasIntro?: boolean;
     intro?: string;
+    image?: string;
 }
 
 /**
@@ -18,7 +19,7 @@ export function Header(props: IHeader): JSX.Element {
     return (
         <header>
             <div className="header__image">
-                <img src="assets/images/homepage-hero.jpg" alt="" />
+                <img src={ props.image } alt="" />
             </div>
             {
                 props.hasIntro ? (
