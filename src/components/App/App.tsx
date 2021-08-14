@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { ContactView } from '../../views/ContactView/ContactView';
 import { HomeView } from '../../views/HomeView/HomeView';
+import { ProjectDetailsView } from '../../views/ProjectDetailsView/ProjectDetailsView';
 import { ProjectsView } from '../../views/ProjectsView/ProjectsView';
 import { Footer } from '../Layout/Footer/Footer';
 import { Nav } from '../Layout/Nav/Nav';
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/portfolio">
               <ProjectsView />
+            </Route>
+            <Route path="/project-details/:id">
+              <ProjectDetailsView />
             </Route>
             <Route path="/contact-me">
               <ContactView />
