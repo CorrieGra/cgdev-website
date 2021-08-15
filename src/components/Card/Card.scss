@@ -38,4 +38,27 @@
 
     #showcase { grid-area: showcase; }
     #info { grid-area: info; }
+
+    @media screen and (max-width: 450px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "showcase"
+                             "info";
+
+        &:not(:first-of-type) { margin: 0 auto 20rem auto; }
+
+        &:nth-child(even) { 
+            grid-template-areas: "showcase"
+                                "info";
+        }
+
+        &__info-wrapper {
+            .card__info {
+                margin: 0;
+                padding: 4rem 0;
+
+                > :not(h2) { padding: 1rem 0; }
+            }
+        }
+
+    }
 }

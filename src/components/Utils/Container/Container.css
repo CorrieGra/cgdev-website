@@ -1,4 +1,10 @@
 .container {
   padding: 0 10% 0 10%;
 }
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=Container.css.map */

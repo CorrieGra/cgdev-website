@@ -16,12 +16,29 @@ header > .header__intro {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 45rem;
+  max-width: 45rem;
   padding: 2rem;
   background-color: var(--col-s-lgrey);
 }
 
 header > .header__intro > h2 {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
+  header.small-m {
+    margin: 0 auto 5rem auto;
+  }
+  header > .header__intro {
+    position: relative;
+    background-color: transparent;
+    overflow: visible;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

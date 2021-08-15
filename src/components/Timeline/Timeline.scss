@@ -35,5 +35,18 @@
 
             &:not(:last-of-type) { margin-right: 1rem; }
         }
+
+        @media screen and (max-width: 450px) {
+            max-width: 100%;
+
+            &--technologies {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &--technology {
+                margin-right: 1rem;
+            }
+        }
     }
 }

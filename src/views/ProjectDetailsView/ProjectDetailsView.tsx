@@ -32,13 +32,13 @@ export function ProjectDetailsView() {
 
     return (
         <Fragment>
-            <Header image={ project?.project_hero }/>
+            <Header className="small-m" image={ project?.project_hero }/>
 
             <div className="project__info--outer-wrapper">
                 <div className="project__info--inner-wrapper">
                     <div className="project__info--left-panel">
                         <div className="project__info--bookmark">
-                            <h3>bookmark</h3>
+                            <h3>{ project?.project_name }</h3>
                             <p>
                                 {
                                     project?.project_description

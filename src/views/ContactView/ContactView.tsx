@@ -48,7 +48,7 @@ export function ContactView() {
                         errors={ errors }/>
                     </div>
 
-                    <Button type="primary" text="Submit" onClick={ handleSubmit(onSubmit) }/>
+                    <Button type="primary" text="send message" onClick={ handleSubmit(onSubmit) }/>
                 </form>
             </Section>
         </Fragment>

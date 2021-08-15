@@ -22,6 +22,16 @@
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 450px) {
+  .project__info--inner-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .project__info--inner-wrapper .project__info--left-panel {
+    margin-bottom: 4rem;
+  }
+}
+
 .project__info--left-panel .project__info--bookmark p {
   padding-right: 1rem;
   margin-bottom: 2rem;

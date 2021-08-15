@@ -44,4 +44,12 @@ form > .form__group:last-of-type {
 form > .form__group label {
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 450px) {
+  form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "name" "email" "message";
+  }
+}
 /*# sourceMappingURL=ContactView.css.map */

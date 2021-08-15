@@ -5,12 +5,23 @@ footer {
     width: 100%;
     padding: 2rem 10% 2rem 10%;
     background-color: var(--col-p-grey-blue);
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 4rem 10% 6rem 10%;
+    }
     
     .footer__menu {
       &--list {
             display: flex;
             align-items: center;
             list-style-type: none;
+
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                margin-bottom: 4rem;
+            }
 
             > .footer__menu--item {
                 display: inline-block;
@@ -25,6 +36,10 @@ footer {
                  }
 
                  > img { width: 20rem;}
+
+                 @media screen and (max-width: 450px) {
+                    &:not(:last-child) { margin: 0 0 2rem 0; }
+                }
             }
         }
     }

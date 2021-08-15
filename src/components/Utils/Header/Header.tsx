@@ -6,6 +6,7 @@ interface IHeader {
     hasIntro?: boolean;
     intro?: string;
     image?: string;
+    className?: string;
 }
 
 /**
@@ -17,7 +18,7 @@ interface IHeader {
  */
 export function Header(props: IHeader): JSX.Element {
     return (
-        <header>
+        <header className={ props.className }>
             <div className="header__image">
                 <img src={ props.image } alt="" />
             </div>

@@ -15,10 +15,25 @@ header {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 45rem;
+        max-width: 45rem;
         padding: 2rem;
         background-color: var(--col-s-lgrey);
         
         > h2 { margin-bottom: 2rem; }
     }
+
+    @media screen and (max-width: 450px) {
+        max-height: max-content;
+
+        &.small-m {
+            margin: 0 auto 5rem auto;
+        }
+
+        > .header__intro {
+            position: relative;
+            background-color: transparent;
+            overflow: visible;
+            padding: 0;
+        }
+     }
 }

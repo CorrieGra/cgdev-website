@@ -44,4 +44,19 @@
 .timeline__item--technology:not(:last-of-type) {
   margin-right: 1rem;
 }
+
+@media screen and (max-width: 450px) {
+  .timeline__item {
+    max-width: 100%;
+  }
+  .timeline__item--technologies {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .timeline__item--technology {
+    margin-right: 1rem;
+  }
+}
 /*# sourceMappingURL=Timeline.css.map */

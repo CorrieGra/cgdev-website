@@ -14,6 +14,12 @@
             text-transform: capitalize;
             margin-bottom: 1rem;
         }
+
+        @media screen and (max-width: 450px) {
+            grid-template-columns: 1fr;
+
+            .project__info--left-panel { margin-bottom: 4rem; }
+        }
     }
 
     &--left-panel {

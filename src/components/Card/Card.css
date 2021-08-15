@@ -64,4 +64,25 @@
   -ms-grid-column: 1;
   grid-area: info;
 }
+
+@media screen and (max-width: 450px) {
+  .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "showcase" "info";
+  }
+  .card:not(:first-of-type) {
+    margin: 0 auto 20rem auto;
+  }
+  .card:nth-child(even) {
+        grid-template-areas: "showcase" "info";
+  }
+  .card__info-wrapper .card__info {
+    margin: 0;
+    padding: 4rem 0;
+  }
+  .card__info-wrapper .card__info > :not(h2) {
+    padding: 1rem 0;
+  }
+}
 /*# sourceMappingURL=Card.css.map */
