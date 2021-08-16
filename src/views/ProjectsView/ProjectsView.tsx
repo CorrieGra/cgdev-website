@@ -10,14 +10,18 @@ const { useStoreActions, useStoreState } = createTypedHooks<IStore>();
 
 export function ProjectsView() {
     const history = useHistory();
-    const loadProjects = useStoreActions((actions) => actions.loadProjects);
+    const { loadProjects, loadProject } = useStoreActions((actions) => actions);
     const projects = useStoreState((state) => state.projects);
 
     useEffect(() => {
         loadProjects();
     }, []);
 
-    const onClick = (id: string) => { history.replace(`/project-details/${ id }`); };
+    const onClick = async (id: string) => { 
+        await loadProject(id)
+            .then(() => { history.replace(`/project-details/${ id }`); })
+            .catch((error: any) => console.log(error));
+     };
 
     return (
         <Fragment>
