@@ -11,16 +11,7 @@ const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
 
 export function ProjectDetailsView() {
     const [projectSlices, setProjectSlices] = useState<any>(null);
-    const location = useLocation();
-    const { pathname } = location;
-    const id: any = /.*\/(\d{1,2})/g.exec(pathname);
-
-    const loadProject = useStoreActions((actions) => actions.loadProject);
     const project = useStoreState((state) => state.project);
-
-    useEffect(() => {
-        loadProject(id[1]);
-    }, []);
 
     useEffect(() => {
         const slices = project?.project_slices;
