@@ -44,7 +44,7 @@
         grid-template-areas: "showcase"
                              "info";
 
-        &:not(:first-of-type) { margin: 0 auto 20rem auto; }
+        // &:not(:first-of-type) { margin: 0 auto 20rem auto; }
 
         &:nth-child(even) { 
             grid-template-areas: "showcase"

@@ -71,9 +71,6 @@
         grid-template-columns: 1fr;
         grid-template-areas: "showcase" "info";
   }
-  .card:not(:first-of-type) {
-    margin: 0 auto 20rem auto;
-  }
   .card:nth-child(even) {
         grid-template-areas: "showcase" "info";
   }

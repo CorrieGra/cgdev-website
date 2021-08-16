@@ -9,7 +9,7 @@ export function Card(props: any) {
     return (
         <div id={ id } className="card">
             <div id="showcase" className="card__showcase">
-                <img src={ project_slices.project_slice_1 } alt="" />
+                <img src={ project.project_hero } alt="" />
             </div>
             <div id="info" className="card__info-wrapper">
                 <div className="card__info">
