@@ -3,11 +3,10 @@ import './ProjectDetailsView.css';
 import React, { Fragment, useEffect, useState } from 'react';
 import { createTypedHooks } from 'easy-peasy';
 import { IStore } from '../../store';
-import { useLocation } from 'react-router-dom';
 import { Header } from '../../components/Utils/Header/Header';
 import { Button } from '../../components/Utils/Button/Button';
 
-const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
+const { useStoreState } = createTypedHooks<IStore>();
 
 export function ProjectDetailsView() {
     const [projectSlices, setProjectSlices] = useState<any>(null);
