@@ -26,6 +26,10 @@
             border-bottom: 1px solid var(--col-s-grey);
             margin: 0 20%;
 
+            > *:not(:last-child) {
+                padding-bottom: 2rem;
+            }
+
             > h2 { text-transform: capitalize; }
 
              &--cta button {
@@ -38,6 +42,24 @@
 
     #showcase { grid-area: showcase; }
     #info { grid-area: info; }
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "showcase"
+                             "info";
+
+        &:nth-child(even) { 
+            grid-template-areas: "showcase"
+                                 "info";
+        }
+
+        &__info-wrapper {        
+            .card__info {
+                padding: 3rem 0;
+                margin: 0 10%;
+            }
+        }
+    }
 
     @media screen and (max-width: 450px) {
         grid-template-columns: 1fr;

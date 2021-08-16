@@ -22,7 +22,7 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1024px) {
   .project__info--inner-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

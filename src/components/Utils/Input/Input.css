@@ -1,5 +1,6 @@
 input,
 textarea {
+  font-size: 16px;
   max-width: 100%;
   width: 100%;
   padding: .9rem 1.6rem 2.2rem 1.6rem;

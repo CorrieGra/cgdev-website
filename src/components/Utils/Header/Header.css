@@ -25,7 +25,7 @@ header > .header__intro > h2 {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   header {
     max-height: -webkit-max-content;
     max-height: -moz-max-content;

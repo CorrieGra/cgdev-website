@@ -13,7 +13,7 @@ footer {
   background-color: var(--col-p-grey-blue);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -36,7 +36,7 @@ footer .footer__menu--list {
   list-style-type: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   footer .footer__menu--list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -65,7 +65,7 @@ footer .footer__menu--list > .footer__menu--item > img {
   width: 20rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   footer .footer__menu--list > .footer__menu--item:not(:last-child) {
     margin: 0 0 2rem 0;
   }

@@ -6,7 +6,7 @@ footer {
     padding: 2rem 10% 2rem 10%;
     background-color: var(--col-p-grey-blue);
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 700px) {
         flex-direction: column;
         justify-content: space-evenly;
         padding: 4rem 10% 6rem 10%;
@@ -18,7 +18,7 @@ footer {
             align-items: center;
             list-style-type: none;
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 700px) {
                 flex-direction: column;
                 margin-bottom: 4rem;
             }
@@ -37,7 +37,7 @@ footer {
 
                  > img { width: 20rem;}
 
-                 @media screen and (max-width: 450px) {
+                 @media screen and (max-width: 700px) {
                     &:not(:last-child) { margin: 0 0 2rem 0; }
                 }
             }
