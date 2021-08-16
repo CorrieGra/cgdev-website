@@ -33,7 +33,7 @@ export function HomeView() {
                     <Link to="/portfolio">
                         <Button type="secondary" text="go to portfolio" />
                     </Link>
-                    <a download href="" rel="noreferrer">
+                    <a download href={ `${process.env.REACT_APP_FILE_URL}/Corrie_Graham-CV-2021-06-21.pdf` } rel="noreferrer" target="_blank">
                         <Button type="secondary" text="download resume" />
                     </a>
                 </div>
