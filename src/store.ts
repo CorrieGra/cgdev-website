@@ -23,18 +23,21 @@ interface IExperience {
 }
 
 export interface IStore {
+    isLoading: boolean;
     projects: IProject[] | any[];
     project: IProject | null;
     experiences: IExperience[] | any[];
     loadProjects: Thunk<IStore>;
     addLoadedProjects: Action<IStore, any>;
-    loadProject: Thunk<IStore>;
+    loadProject: Thunk<IStore, any>;
     addLoadedProject: Action<IStore, any>;
     loadExperiences: Thunk<IStore>;
     addLoadedExperiences: Action<IStore, any>;
+    setIsLoading: Action<IStore, boolean>;
 }
 
 const store = createStore<IStore>({
+    isLoading: false,
     projects: [],
     project: null,
     experiences: [],
@@ -58,6 +61,7 @@ const store = createStore<IStore>({
         state.project = payload;
     }),
     loadProject: thunk(async (actions, payload) => {
+        actions.setIsLoading(true);
         await axios({
             url: `${process.env.REACT_APP_API_URL}/api/project/${ payload }`,
             method: 'GET',
@@ -65,6 +69,7 @@ const store = createStore<IStore>({
         })
         .then((response) => {
             actions.addLoadedProject(response.data);
+            actions.setIsLoading(false);
         })
         .catch((error) => {
             console.log(error);
@@ -86,6 +91,9 @@ const store = createStore<IStore>({
             console.log(error);
         });
     }),
+    setIsLoading: action((state, payload: boolean) => {
+        state.isLoading = payload;
+    })
 });
 
 export default store;
