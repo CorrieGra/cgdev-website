@@ -43,7 +43,7 @@ const store = createStore<IStore>({
     }),
     loadProjects: thunk(async (actions) => {
         await axios({
-            url: 'http://localhost:5000/api/project',
+            url: `${process.env.REACT_APP_API_URL}/api/project`,
             method: 'GET',
             withCredentials: true
         })
@@ -59,7 +59,7 @@ const store = createStore<IStore>({
     }),
     loadProject: thunk(async (actions, payload) => {
         await axios({
-            url: `http://localhost:5000/api/project/${ payload }`,
+            url: `${process.env.REACT_APP_API_URL}/api/project/${ payload }`,
             method: 'GET',
             withCredentials: true
         })
@@ -75,7 +75,7 @@ const store = createStore<IStore>({
     }),
     loadExperiences: thunk(async (actions) => {
         await axios({
-            url: 'http://localhost:5000/api/experience',
+            url: `${process.env.REACT_APP_API_URL}/api/experience`,
             method: 'GET',
             withCredentials: true
         })
