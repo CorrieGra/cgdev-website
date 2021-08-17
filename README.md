@@ -11,7 +11,6 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Continued Development](#continued-development)
@@ -31,11 +30,6 @@ Users should be able to:
 - Receive an error message when the contact form is submitted if:
   - The `Name`, `Email Address` or `Message` fields are empty should show "This field is required"
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
-
-
-### Links
-
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
