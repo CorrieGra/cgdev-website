@@ -14,6 +14,7 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Continued Development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Available Scripts](#available-scripts)
 - [Author](#author)
@@ -79,7 +80,8 @@ Users should be able to:
   - Removed all unnecessary files [ ✔ ]
   - Set up folder structure [ ✔ ]
   - Set up all css variables, resets and basic styling [ ✔ ]
-  - Implement Easy Peasy For State Management [ ✔ ]
+  - Implement Easy Peasy For State Management 
+    - Add general store [ ✔ ]
   - Build all components first 
     - Timeline [ ✔ ]
     - Layout
@@ -95,7 +97,12 @@ Users should be able to:
     - ProjectView [ ✔ ]
     - ProjectDetailsView [ ✔ ]
     - ContactUsView [ ✔ ]
-  - Add animations with [FramerMotion](https://www.framer.com/motion/)
+
+### Continued Development
+- Add persistence to store [  ]
+- Add pagination bar for navigation between projects on ProjectDetailsView [  ]
+- Improve mobile nav menu animations [  ]
+- Add animations with [FramerMotion](https://www.framer.com/motion/)
     - Page transition from ProjectView to ProjectDetailsView [  ]
     - Scroll effects [  ]
 
@@ -142,5 +149,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Author
 
-- Website - [Corrie Graham](https://www.your-site.com)
+- Portfolio Website - [Corrie Graham](https://cgdev.dev-test.org.za)
 - Frontend Mentor - [@CorrieGra](https://www.frontendmentor.io/profile/CorrieGra)
