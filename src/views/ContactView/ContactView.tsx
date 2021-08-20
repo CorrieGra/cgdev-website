@@ -1,15 +1,54 @@
 import './ContactView.css';
 import React, { Fragment } from 'react';
+import axios from 'axios';
 import { Section } from '../../components/Layout/Section/Section';
 import { Input } from '../../components/Utils/Input/Input';
 import { useForm } from 'react-hook-form';
 import { Button } from '../../components/Utils/Button/Button';
+import { store } from 'react-notifications-component';
 
 export function ContactView() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data: any) => {
-        console.log(data);
+    const sendEmail = async (data: any) => {       
+        await axios({
+            url: `${process.env.REACT_APP_API_URL}/email`,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data)
+        })
+        .then(() => {
+            store.addNotification({
+                title: "Success!",
+                message: "Your message has been sent! I'll be with you shortly.",
+                type: "success",
+                insert: "top",
+                container: "top-right",
+                animationIn: ["animate__animated", "animate__fadeIn"],
+                animationOut: ["animate__animated", "animate__fadeOut"],
+                dismiss: {
+                  duration: 2500,
+                  onScreen: true
+                }
+            }); 
+        })
+        .catch(() => {
+            store.addNotification({
+                title: "Oops!",
+                message: "Your message could not be sent, try again later.",
+                type: "danger",
+                insert: "top",
+                container: "top-right",
+                animationIn: ["animate__animated", "animate__fadeIn"],
+                animationOut: ["animate__animated", "animate__fadeOut"],
+                dismiss: {
+                  duration: 2250,
+                  onScreen: true
+                }
+            }); 
+        });
     }
 
     return (
@@ -47,8 +86,7 @@ export function ContactView() {
                         validation={{ required: true }}
                         errors={ errors }/>
                     </div>
-
-                    <Button type="primary" text="send message" onClick={ handleSubmit(onSubmit) }/>
+                    <Button type="primary" text="send message" onClick={ handleSubmit(sendEmail) }/>
                 </form>
             </Section>
         </Fragment>
