@@ -7,7 +7,8 @@ import { Button } from "../../components/Utils/Button/Button";
 import { Header } from "../../components/Utils/Header/Header";
 import { createTypedHooks } from 'easy-peasy';
 import { IStore } from "../../store";
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { isMobile } from "react-device-detect";
 
 
 const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
@@ -31,8 +32,9 @@ export function HomeView() {
         <Fragment>
             <Header
             image="assets/images/homepage-hero.jpg"
+            intro="Hello, I'm Corrie Graham and I love to build beautiful websites"
             hasIntro
-            intro="Hello, I'm Corrie Graham and I love to build beautiful websites"/>
+            />
 
             <Section id="about-me" title="about me">
                 <p>
@@ -54,7 +56,7 @@ export function HomeView() {
             isVisible={ experiencePositionFromTop ? experiencePositionFromTop <= 824.5 : false }>
                 <AnimatePresence>
                     {
-                       !!experiencePositionFromTop && experiencePositionFromTop <= 824.5 && (<Timeline data={ experiences }/>)
+                       !!experiencePositionFromTop && (isMobile ? experiencePositionFromTop <= 50 : experiencePositionFromTop <= 400)  && (<Timeline data={ experiences }/>)
                     }
                 </AnimatePresence>
             </Section>
