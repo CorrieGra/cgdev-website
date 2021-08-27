@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { Fragment, useEffect } from "react";
+// /* eslint-disable react-hooks/exhaustive-deps */
+import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Section } from "../../components/Layout/Section/Section";
 import { Timeline } from "../../components/Timeline/Timeline";
@@ -7,16 +7,25 @@ import { Button } from "../../components/Utils/Button/Button";
 import { Header } from "../../components/Utils/Header/Header";
 import { createTypedHooks } from 'easy-peasy';
 import { IStore } from "../../store";
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
 
 export function HomeView() {
+    const [experiencePositionFromTop, setExperiencePositionFromTop] = useState(document.querySelector('#experience')?.getBoundingClientRect().top);
+    const [yPosition, setYPosition] = useState(window.pageYOffset);
     const experiences = useStoreState((state) => state.experiences);
     const loadExperiences = useStoreActions((actions) => actions.loadExperiences);
 
     useEffect(() => {
         loadExperiences();
-    }, []);
+        window.addEventListener('scroll', () => setYPosition(window.pageYOffset));
+    });
+
+    useEffect(() => {
+        setExperiencePositionFromTop(document.querySelector('#experience')?.getBoundingClientRect().top);
+    }, [yPosition]);
 
     return (
         <Fragment>
@@ -39,8 +48,15 @@ export function HomeView() {
                 </div>
             </Section>
 
-            <Section title="experience">
-                <Timeline data={ experiences }/>
+            <Section
+            id="experience"
+            title="experience"
+            isVisible={ experiencePositionFromTop ? experiencePositionFromTop <= 824.5 : false }>
+                <AnimatePresence>
+                    {
+                       !!experiencePositionFromTop && experiencePositionFromTop <= 824.5 && (<Timeline data={ experiences }/>)
+                    }
+                </AnimatePresence>
             </Section>
         </Fragment>
     );
