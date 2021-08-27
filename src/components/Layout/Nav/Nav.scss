@@ -16,21 +16,26 @@
             list-style-type: none;
 
             > .nav__menu--item {
+                position: relative;
                 display: inline-block;
                 text-transform: uppercase;
+                padding: 1rem 1rem 1rem 1rem;
 
-                &:not(:last-child) { margin-right: 5rem; }
+                &:not(:last-child) { margin-right: 3rem; }
+
+                .nav__menu--item-border {
+                    position: absolute;
+                    top: 1rem;
+                    right: -.5rem;
+                    bottom: 1rem;
+                    left: -.5rem;
+                    border: 1px solid var(--col-p-cyan);
+                }
 
                 > a {
                     font-size: 1.4rem;
                     text-decoration: none;
                     color: var(--col-p-grey-blue);
-                }
-
-                &.active {
-                    > a {
-                        color: var(--col-p-cyan);
-                    }
                 }
             }
         }

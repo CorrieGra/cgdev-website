@@ -25,22 +25,29 @@
 }
 
 .nav > .nav__menu > .nav__menu--list > .nav__menu--item {
+  position: relative;
   display: inline-block;
   text-transform: uppercase;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .nav > .nav__menu > .nav__menu--list > .nav__menu--item:not(:last-child) {
-  margin-right: 5rem;
+  margin-right: 3rem;
+}
+
+.nav > .nav__menu > .nav__menu--list > .nav__menu--item .nav__menu--item-border {
+  position: absolute;
+  top: 1rem;
+  right: -.5rem;
+  bottom: 1rem;
+  left: -.5rem;
+  border: 1px solid var(--col-p-cyan);
 }
 
 .nav > .nav__menu > .nav__menu--list > .nav__menu--item > a {
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--col-p-grey-blue);
-}
-
-.nav > .nav__menu > .nav__menu--list > .nav__menu--item.active > a {
-  color: var(--col-p-cyan);
 }
 
 .nav > .nav__mobile-menu {
