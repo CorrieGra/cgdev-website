@@ -35,6 +35,7 @@
         }
 
         &:disabled {
+            cursor: none;
             background-color: var(--col-s-grey);
             > div:first-child > svg > g {
                 stroke: white;
