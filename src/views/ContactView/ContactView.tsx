@@ -54,7 +54,7 @@ export function ContactView() {
     return (
         <Fragment>
             <Section title="get in touch">
-                <p className="section__intro">I'm always eager to hear what you're working on and how I can be of any assistance. I'm hard-working and take every task seriously, I can work good on my own or in a team and I pay a lot of attention to details. Please, feel free to contact me with the form below to start our journey together !</p>
+                <p>I'm always eager to hear what you're working on and how I can be of any assistance. I'm hard-working and take every task seriously, I can work good on my own or in a team and I pay a lot of attention to details. Please, feel free to contact me with the form below to start our journey together !</p>
             </Section>
 
             <Section title="contact me">
