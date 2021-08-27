@@ -50,6 +50,7 @@
 
     @media screen and (max-width: 1024px) {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-template-areas: "showcase"
                              "info";
 
