@@ -1,15 +1,41 @@
 import './Card.css';
 import React from 'react';
 import { Button } from '../Utils/Button/Button';
+import { motion } from 'framer-motion';
 
 export function Card(props: any) {
-    const { project, onClick, id } = props;
+    const { project, onClick, id, index } = props;
     const project_slices = JSON.parse(project.project_slices);
 
+    const cardVariants = {
+        initial: (i: number) => ({
+            y: 200,
+            x: i % 2 === 0 ? -400 : 400,
+            opacity: 0
+        }),
+        entry: (i: number) => ({
+            y: 0,
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay: .3 * i,
+                duration: .3,
+            }
+        })
+    };
+
     return (
-        <div id={ id } className="card">
+        <motion.div
+        custom={ index }
+        variants={ cardVariants }
+        initial="initial"
+        animate="entry"
+        id={ id } 
+        className="card">
             <div id="showcase" className="card__showcase">
-                <img src={ project.project_hero } alt="" />
+                <img
+                src={ project.project_hero } 
+                alt="" />
             </div>
             <div id="info" className="card__info-wrapper">
                 <div className="card__info">
@@ -20,6 +46,6 @@ export function Card(props: any) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
