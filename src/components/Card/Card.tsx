@@ -9,16 +9,14 @@ export function Card(props: any) {
 
     const cardVariants = {
         initial: (i: number) => ({
-            y: 200,
-            x: i % 2 === 0 ? -400 : 400,
+            y: 1000,
             opacity: 0
         }),
         entry: (i: number) => ({
             y: 0,
-            x: 0,
             opacity: 1,
             transition: {
-                delay: .3 * i,
+                delay: i % 2 === 0 ? .3 : .3 * i,
                 duration: .3,
             }
         })
