@@ -2,6 +2,7 @@
 import './Nav.css';
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { AnimateSharedLayout, motion } from 'framer-motion';
 
 export function Nav() {
     const [navIsOpen, setNavIsOpen] = useState(false);
@@ -23,17 +24,46 @@ export function Nav() {
                 </Link>
             </div>
             <div className="nav__menu">
+                <AnimateSharedLayout>
                 <ul className="nav__menu--list">
-                    <li className={ location.pathname === '/' ? 'nav__menu--item active' : 'nav__menu--item' }>
+                    <li className="nav__menu--item">
+                        {
+                            location.pathname === '/' && (
+                                <motion.div
+                                layout
+                                initial={false}
+                                layoutId="nav__menu--item-border"
+                                className="nav__menu--item-border"></motion.div>        
+                            )
+                        }
                         <Link to="/">home</Link>
                     </li>
-                    <li className={ location.pathname === '/portfolio' ? 'nav__menu--item active' : 'nav__menu--item' }>
+                    <li className="nav__menu--item">
+                        {
+                            location.pathname === '/portfolio' && (
+                                <motion.div
+                                layout
+                                initial={false}
+                                layoutId="nav__menu--item-border"
+                                className="nav__menu--item-border"></motion.div>        
+                            )
+                        }
                         <Link to="/portfolio">portfolio</Link>
                     </li>
-                    <li className={ location.pathname === '/contact-me' ? 'nav__menu--item active' : 'nav__menu--item' }>
+                    <li className="nav__menu--item">
+                        {
+                            location.pathname === '/contact-me' && (
+                                <motion.div
+                                layout
+                                initial={false}
+                                layoutId="nav__menu--item-border"
+                                className="nav__menu--item-border"></motion.div>        
+                            )
+                        }
                         <Link to="/contact-me">contact me</Link>
                     </li>
                 </ul>
+                </AnimateSharedLayout>
             </div>
             <div className="nav__mobile-menu">
                 <div className="nav__mobile-menu--icon-wrapper">
