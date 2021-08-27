@@ -36,7 +36,9 @@ export function ProjectDetailsView() {
                             </p>
                             <div className="project__info--cta">
                                 <a href={ project?.project_website_url } rel="noreferrer" target="_blank">
-                                    <Button type="secondary" text="view website" />
+                                    {
+                                        project?.project_website_url !== '' ? (<Button type="secondary" text="view website" />) : (<Button type="secondary" text="view website" disabled/>)
+                                    }
                                 </a>
                                 <a href={ project?.project_repo_url } rel="noreferrer" target="_blank">
                                     <Button type="secondary" text="view repo" />

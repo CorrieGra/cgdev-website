@@ -1,6 +1,7 @@
 .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50rem;
     grid-template-areas: "showcase info";
     margin: 0 auto 4rem auto;
 
@@ -11,9 +12,13 @@
     &:nth-child(even) { grid-template-areas: "info showcase"; }
 
     max-width: 80%;
+    max-height: max-content;
 
-    &__showcase img {
-        max-width: 100%;
+    &__showcase {
+        display: flex;
+        align-items: center;
+
+        img { max-width: 100%; }
     }
 
     &__info-wrapper {        
