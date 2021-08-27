@@ -5,6 +5,7 @@ import { createTypedHooks } from 'easy-peasy';
 import { IStore } from '../../store';
 import { Card } from '../../components/Card/Card';
 import { useHistory } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 const { useStoreActions, useStoreState } = createTypedHooks<IStore>();
 
@@ -25,9 +26,11 @@ export function ProjectsView() {
 
     return (
         <Fragment>
-            {
-                projects.map((project, index) => (<Card key={ index } id={ project.project_id } project={ project } onClick={() => onClick(project.project_id) } />))
-            }
+            <AnimatePresence>
+                {
+                    projects.map((project, index) => (<Card index={ index } key={ index } id={ project.project_id } project={ project } onClick={() => onClick(project.project_id) } />))
+                }
+            </AnimatePresence>
         </Fragment>
     );
 };
