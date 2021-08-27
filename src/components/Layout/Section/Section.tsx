@@ -5,6 +5,7 @@ interface ISection {
     title?: string;
     children?: any;
     id?: string;
+    isVisible?: boolean;
 }
 
 export function Section(props: ISection) {
