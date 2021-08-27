@@ -41,7 +41,7 @@ export function HomeView() {
             <AnimatePresence exitBeforeEnter>
                 <Section id="about-me" title="about me">
                     {
-                        !!aboutPositionFromTop && (isMobile ? aboutPositionFromTop <= 20 : aboutPositionFromTop <= 820) && (
+                        !!aboutPositionFromTop && aboutPositionFromTop <= 820 && (
                             <Fragment>
                                 <motion.p
                                 variants={ sectionVariants }>
@@ -70,7 +70,7 @@ export function HomeView() {
             isVisible={ experiencePositionFromTop ? experiencePositionFromTop <= 824.5 : false }>
                 <AnimatePresence>
                     {
-                       !!experiencePositionFromTop && (isMobile ? experiencePositionFromTop <= 50 : experiencePositionFromTop <= 800) && (<Timeline data={ experiences }/>)
+                       !!experiencePositionFromTop && experiencePositionFromTop <= 800 && (<Timeline data={ experiences }/>)
                     }
                 </AnimatePresence>
             </Section>
