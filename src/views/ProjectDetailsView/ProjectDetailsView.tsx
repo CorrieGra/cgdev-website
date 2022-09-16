@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './ProjectDetailsView.css';
 import React, { Fragment, useEffect, useState } from 'react';
 import { createTypedHooks } from 'easy-peasy';
-import { IStore } from '../../store';
-import { Header } from '../../components/Utils/Header/Header';
-import { Button } from '../../components/Utils/Button/Button';
+
+import { IStore } from '@store';
+import { Header } from '@components/Utils/Header/Header';
+import { Button } from '@components/Utils/Button/Button';
+
+import './ProjectDetailsView.css';
 
 const { useStoreState } = createTypedHooks<IStore>();
 

@@ -5,10 +5,11 @@ import App from './components/App/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactNotification from 'react-notifications-component'
-import store from './store';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { StoreProvider } from 'easy-peasy';
+
+import store from './store';
 
 const _history = createBrowserHistory();
 

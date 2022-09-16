@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Section } from "../../components/Layout/Section/Section";
-import { Timeline } from "../../components/Timeline/Timeline";
-import { Button } from "../../components/Utils/Button/Button";
-import { Header } from "../../components/Utils/Header/Header";
 import { createTypedHooks } from 'easy-peasy';
-import { IStore } from "../../store";
+
+import { Section } from "@components/Layout/Section/Section";
+import { Timeline } from "@components/Timeline/Timeline";
+import { Button } from "@components/Utils/Button/Button";
+import { Header } from "@components/Utils/Header/Header";
+import { IStore } from "@store";
 
 const { useStoreState, useStoreActions } = createTypedHooks<IStore>();
 

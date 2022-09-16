@@ -1,6 +1,7 @@
-import './Header.css';
 import React from 'react';
+
 import { Button } from '../Button/Button';
+import './Header.css';
 
 interface IHeader {
     hasIntro?: boolean;

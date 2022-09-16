@@ -1,5 +1,6 @@
-import './Section.css';
 import React from 'react';
+
+import './Section.css';
 
 interface ISection {
     title?: string;

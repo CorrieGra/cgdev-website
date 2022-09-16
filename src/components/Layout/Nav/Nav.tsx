@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './Nav.css';
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
+import './Nav.css';
 
 export function Nav() {
     const [navIsOpen, setNavIsOpen] = useState(false);
