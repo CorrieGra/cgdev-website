@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import axios, { AxiosResponse } from 'axios';
 import { Action, action, createStore, Thunk, thunk } from 'easy-peasy';
+
 import { Entities } from './react-app-env';
 
 export interface IStore {

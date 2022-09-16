@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
-import { ContactView } from '../../views/ContactView/ContactView';
-import { HomeView } from '../../views/HomeView/HomeView';
-import { ProjectDetailsView } from '../../views/ProjectDetailsView/ProjectDetailsView';
-import { ProjectsView } from '../../views/ProjectsView/ProjectsView';
+
+import { ContactView } from '@views/ContactView/ContactView';
+import { HomeView } from '@views/HomeView/HomeView';
+import { ProjectDetailsView } from '@views/ProjectDetailsView/ProjectDetailsView';
+import { ProjectsView } from '@views/ProjectsView/ProjectsView';
+
 import { Footer } from '../Layout/Footer/Footer';
 import { Nav } from '../Layout/Nav/Nav';
 import { Container } from '../Utils/Container/Container';

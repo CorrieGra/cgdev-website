@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './ProjectsView.css';
 import React, { Fragment, useEffect } from 'react';
 import { createTypedHooks } from 'easy-peasy';
-import { IStore } from '../../store';
-import { Card } from '../../components/Card/Card';
 import { useHistory } from 'react-router-dom';
+
+import { IStore } from '@store';
+import { Card } from '@components/Card/Card';
+
+import './ProjectsView.css';
 
 const { useStoreActions, useStoreState } = createTypedHooks<IStore>();
 

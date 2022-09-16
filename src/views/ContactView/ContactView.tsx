@@ -1,11 +1,13 @@
-import './ContactView.css';
 import React, { Fragment } from 'react';
 import axios from 'axios';
-import { Section } from '../../components/Layout/Section/Section';
-import { Input } from '../../components/Utils/Input/Input';
 import { useForm } from 'react-hook-form';
-import { Button } from '../../components/Utils/Button/Button';
 import { store } from 'react-notifications-component';
+
+import { Section } from '@components/Layout/Section/Section';
+import { Input } from '@components/Utils/Input/Input';
+import { Button } from '@components/Utils/Button/Button';
+
+import './ContactView.css';
 
 export function ContactView() {
     const { register, handleSubmit, formState: { errors } } = useForm();

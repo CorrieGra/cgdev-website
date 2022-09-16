@@ -1,6 +1,7 @@
-import './Timeline.css';
 import React from 'react';
 import moment from 'moment';
+
+import './Timeline.css';
 
 export function Timeline(props: any): JSX.Element {
     const calculateExperienceDuration = (startDate: string | null, endDate: string | null): string => {
