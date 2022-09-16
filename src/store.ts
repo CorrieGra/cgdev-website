@@ -1,33 +1,14 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { Action, action, createStore, Thunk, thunk } from 'easy-peasy';
-
-export interface IProject {
-    project_name: string;
-    project_background: string;
-    project_description: string;
-    project_hero: any;
-    project_slices: any;
-    project_website_url: string;
-    project_repo_url: string;
-}
-
-interface IExperience {
-    experience_company: string;
-    experience_company_location: string;
-    experience_start_date: string;
-    experience_end_date: string;
-    experience_is_ongoing: boolean;
-    experience_position: string;
-    experience_technologies: string[] | null;
-}
+import { Entities } from './react-app-env';
 
 export interface IStore {
     isLoading: boolean;
-    projects: IProject[] | any[];
-    project: IProject | null;
-    experiences: IExperience[] | any[];
-    loadProjects: Thunk<IStore>;
+    projects: Entities.Project.Interfaces.IProject[] | any[];
+    project: Entities.Project.Interfaces.IProject | null;
+    experiences: Entities.Experience.Interfaces.IExperience[] | any[];
+    loadProjects: Thunk<IStore>; 
     addLoadedProjects: Action<IStore, any>;
     loadProject: Thunk<IStore, any>;
     addLoadedProject: Action<IStore, any>;
@@ -41,7 +22,7 @@ const store = createStore<IStore>({
     projects: [],
     project: null,
     experiences: [],
-    addLoadedProjects: action((state, payload: any) => {
+    addLoadedProjects: action((state, payload: Entities.Project.Interfaces.IProject[]) => {
         state.projects = payload;
     }),
     loadProjects: thunk(async (actions) => {
@@ -50,14 +31,14 @@ const store = createStore<IStore>({
             method: 'GET',
             withCredentials: true
         })
-        .then((response) => {
+        .then((response: AxiosResponse<Entities.Project.Interfaces.IProject[]>) => {
             actions.addLoadedProjects(response.data);
         })
         .catch((error) => {
             console.log(error);
         });
     }),
-    addLoadedProject: action((state, payload: any) => {
+    addLoadedProject: action((state, payload: Entities.Project.Interfaces.IProject) => {
         state.project = payload;
     }),
     loadProject: thunk(async (actions, payload) => {
@@ -67,7 +48,7 @@ const store = createStore<IStore>({
             method: 'GET',
             withCredentials: true
         })
-        .then((response) => {
+        .then((response: AxiosResponse<Entities.Project.Interfaces.IProject>) => {
             actions.addLoadedProject(response.data);
             actions.setIsLoading(false);
         })
@@ -75,7 +56,7 @@ const store = createStore<IStore>({
             console.log(error);
         });
     }),
-    addLoadedExperiences: action((state, payload: any) => {
+    addLoadedExperiences: action((state, payload: Entities.Experience.Interfaces.IExperience[]) => {
         state.experiences = payload;
     }),
     loadExperiences: thunk(async (actions) => {
@@ -84,7 +65,7 @@ const store = createStore<IStore>({
             method: 'GET',
             withCredentials: true
         })
-        .then((response) => {
+        .then((response: AxiosResponse<Entities.Experience.Interfaces.IExperience[]>) => {
             actions.addLoadedExperiences(response.data);
         })
         .catch((error) => {
